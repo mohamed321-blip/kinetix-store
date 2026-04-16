@@ -1,4 +1,3 @@
-/* ─── Design Tokens ─────────────────────────────────────────── */
 :root {
   --color-white:        #ffffff;
   --color-off-white:    #f4f8f5;
@@ -12,28 +11,16 @@
   --color-text-body:    #2e4d43;
   --color-text-muted:   #6b9080;
   --color-border:       #c3ddd1;
-
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-
-  --shadow-soft: 0 4px 24px rgba(39, 145, 106, 0.10);
-  --shadow-card: 0 2px 12px rgba(39, 145, 106, 0.08);
-
-  --font-display: 'DM Serif Display', 'Georgia', serif;
-  --font-body:    'Nunito', 'Helvetica Neue', sans-serif;
 }
 
-/* ─── App Root ──────────────────────────────────────────────── */
 .App {
   text-align: center;
   background-color: var(--color-off-white);
   min-height: 100vh;
-  font-family: var(--font-body);
+  font-family: 'Nunito', sans-serif;
   color: var(--color-text-body);
 }
 
-/* ─── Logo ──────────────────────────────────────────────────── */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -46,26 +33,19 @@
   }
 }
 
-/* ─── Header ────────────────────────────────────────────────── */
 .App-header {
-  background: linear-gradient(
-    145deg,
-    var(--color-white)      0%,
-    var(--color-off-white)  40%,
-    var(--color-green-light) 100%
-  );
+  background: linear-gradient(145deg, #ffffff 0%, #f4f8f5 40%, #d0eada 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: var(--color-text-dark);
+  color: #12302a;
   position: relative;
   overflow: hidden;
 }
 
-/* subtle green circle decorations */
 .App-header::before,
 .App-header::after {
   content: '';
@@ -78,7 +58,7 @@
 .App-header::before {
   width: 520px;
   height: 520px;
-  background: var(--color-green-main);
+  background: #27916a;
   top: -140px;
   right: -140px;
 }
@@ -86,74 +66,25 @@
 .App-header::after {
   width: 320px;
   height: 320px;
-  background: var(--color-green-mid);
+  background: #4caf82;
   bottom: -80px;
   left: -80px;
 }
 
-/* ─── Link ──────────────────────────────────────────────────── */
 .App-link {
-  color: var(--color-green-accent);
+  color: #0f9b6e;
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 2px solid var(--color-green-light);
+  border-bottom: 2px solid #d0eada;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .App-link:hover {
-  color: var(--color-green-deep);
-  border-color: var(--color-green-main);
+  color: #1a6b4e;
+  border-color: #27916a;
 }
 
-/* ─── Logo animation (gentle pulse instead of spin) ─────────── */
 @keyframes App-logo-pulse {
   0%, 100% { transform: scale(1);    opacity: 1;    }
   50%       { transform: scale(1.04); opacity: 0.88; }
-}
-
-/* ─── Utility: Card surface ─────────────────────────────────── */
-.card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--color-shadow);
-  padding: 1.5rem;
-}
-
-/* ─── Utility: Green pill badge ─────────────────────────────── */
-.badge-green {
-  display: inline-block;
-  background: var(--color-green-light);
-  color: var(--color-green-deep);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-}
-
-/* ─── Utility: Primary button ───────────────────────────────── */
-.btn-primary {
-  background: var(--color-green-main);
-  color: var(--color-white);
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 0.65rem 1.5rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 12px rgba(39, 145, 106, 0.28);
-}
-
-.btn-primary:hover {
-  background: var(--color-green-deep);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(39, 145, 106, 0.35);
-}
-
-.btn-primary:active {
-  transform: translateY(0);
 }
